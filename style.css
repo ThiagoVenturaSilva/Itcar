@@ -1684,3 +1684,54 @@ nav div {
     transition-duration: 0.01ms !important;
   }
 }
+
+.hero-container {
+  gap: 64px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.hero-content h1 {
+  margin: 0 0 8px;
+  line-height: 1.1;
+}
+
+.hero-content .hero-description {
+  margin: 0 0 8px;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.hero-content .hero-CTA {
+  margin-top: 8px;
+}
+
+.hero-visual {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .hero-content {
+    gap: 22px;
+  }
+
+  .hero-content h1 {
+    line-height: 1.15;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-height: auto;
+  }
+}
