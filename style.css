@@ -1740,6 +1740,7 @@ nav div {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 .partners-list {
