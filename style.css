@@ -1735,3 +1735,48 @@ nav div {
     min-height: auto;
   }
 }
+
+.partners {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.partners-list {
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: partners-scroll 25s linear infinite;
+  will-change: transform;
+}
+
+.partners-group {
+  display: flex;
+  flex: 0 0 100vw;
+  width: 100vw;
+  min-width: 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+  gap: 28px;
+  padding: 0 24px;
+}
+
+.partners-group span {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@keyframes partners-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.partners-list:hover {
+  animation-play-state: paused;
+}
