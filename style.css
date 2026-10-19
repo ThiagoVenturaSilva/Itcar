@@ -357,60 +357,49 @@ nav div {
 
 .partners {
   width: 100%;
-
-  background-color: var(--navy);
-
-  padding: 28px 24px;
-
   overflow: hidden;
+  background: #0a0a0b;
+  padding: 28px 0;
+  box-sizing: border-box;
 }
 
 .partners-title {
-  margin: 0 0 20px;
-
-  color: var(--white);
-
   text-align: center;
-
-  font-size: 13px;
-
-  font-weight: 600;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 32px;
 }
 
 .partners-list {
   display: flex;
-
   width: max-content;
-
-  animation: partners-scroll 20s linear infinite;
+  animation: partners-scroll 30s linear infinite;
+  will-change: transform;
 }
 
 .partners-group {
   display: flex;
-
   align-items: center;
-
-  justify-content: space-around;
-
-  width: 100vw;
-
   flex-shrink: 0;
+  gap: 32px;
+  padding-right: 32px;
 }
 
-.partners-list span {
-  color: var(--white);
-
-  font-size: 18px;
-
+.partners-group span {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 20px;
   font-weight: 600;
 }
 
-.partners-list span:not(:last-child)::after {
+.partners-group span::after {
   content: "•";
-
-  margin-left: 24px;
-
-  color: var(--foodstock-orange);
+  color: #e32636;
+  margin-left: 32px;
 }
 
 @keyframes partners-scroll {
@@ -423,6 +412,34 @@ nav div {
   }
 }
 
+.partners-list:hover {
+  animation-play-state: paused;
+}
+
+/* Ajustes para celular */
+@media (max-width: 768px) {
+  .partners {
+    padding: 24px 0;
+  }
+
+  .partners-title {
+    font-size: 20px;
+    margin-bottom: 28px;
+  }
+
+  .partners-group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
+  .partners-group span {
+    font-size: 16px;
+  }
+
+  .partners-group span::after {
+    margin-left: 20px;
+  }
+}
 .singup {
   justify-self: center;
 
