@@ -1759,7 +1759,7 @@ nav div {
   box-sizing: border-box;
   align-items: center;
   justify-content: space-around;
-  gap: 28px;
+  gap: 35px;
   padding: 0 24px;
 }
 
@@ -1780,4 +1780,10 @@ nav div {
 
 .partners-list:hover {
   animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .partners {
+    display: none;
+  }
 }
