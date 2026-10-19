@@ -382,8 +382,9 @@ nav div {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  gap: 32px;
-  padding-right: 32px;
+  gap: 36px;
+  padding-right: 36px;
+  box-sizing: border-box;
 }
 
 .partners-group span {
@@ -394,6 +395,12 @@ nav div {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
+}
+
+.partners-group span::after {
+  content: "•";
+  color: #e32636;
+  margin-left: 36px;
 }
 
 .partners-group span::after {
@@ -427,17 +434,19 @@ nav div {
     margin-bottom: 28px;
   }
 
-  .partners-group {
-    gap: 20px;
-    padding-right: 20px;
-  }
+  @media (max-width: 768px) {
+    .partners-group {
+      gap: 24px;
+      padding-right: 24px;
+    }
 
-  .partners-group span {
-    font-size: 16px;
-  }
+    .partners-group span {
+      font-size: 16px;
+    }
 
-  .partners-group span::after {
-    margin-left: 20px;
+    .partners-group span::after {
+      margin-left: 24px;
+    }
   }
 }
 .singup {
